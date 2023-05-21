@@ -1,0 +1,55 @@
+$ltr: 'html[lang="en"]';
+$rtl: 'html[lang="ar"]';
+/*********************************************************
+  // global color variables
+**********************************************************/
+
+// colors
+$main: #1D71B8;
+$sec: #fd3800;
+$red: #FB3640;
+$blue: #0A2463;
+$yellow: #60db03;
+$text-color: #51D6CA;
+$white: #fff;
+$white3: #FAFAFA;
+$dark: #161616;
+$black: #202020;
+$border-color: #D5D5D5;
+$placholder-color: #adabab;
+$main-shadow: 0 0 8px 0 rgba($color: $black, $alpha: .1);
+$light: #6c757d;
+$icon-color: #b1b0b0;
+$side-color: #939393;
+$side-shadow: 0 2px 5px rgb(0 0 0 / 5%);
+$nav-shadow: 0 3px 16px rgb(133 133 133 / 5%);
+$text-shadow: 0 2px 2px rgba($color: $dark, $alpha: .1);
+$main-transition: all .3s ease;
+
+
+/*********************************************************
+  // Font variables
+**********************************************************/
+
+$font-normal: 'HSDream-Light', sans-serif, 'Font Awesome 5 Free';
+
+/*********************************************************
+  // spacing variables
+**********************************************************/
+// these variable/s is still not applied on all elements
+
+$space-between: 20px;
+$spacer: 10px;
+
+/*********************************************************
+  // screens
+**********************************************************/
+$screen-xxl: 1720px;
+$screen-xx: 1600px;
+$screen-xl: 1280px;
+$screen-lg2: 1200px;
+$screen-lg: 992px;
+$screen-md: 768px;
+$screen-sm: 576px;
+$screen-xs: 425px;
+$screen-xxs: 375px;

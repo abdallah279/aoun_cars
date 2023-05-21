@@ -1,0 +1,141 @@
+@import "sass/variables", "sass/mixins", "sass/global" , "sass/components", "sass/navbar", "sass/footer";
+
+
+// Home Slider
+.home-item{
+  position: relative;
+  height: calc(100vh - 142px);
+  .home-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &::after{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .4);
+  }
+
+}
+
+
+// Brands carousel
+.brands-carousel{
+  background-color: #fff;
+  padding: 10px 0;
+}
+
+.brand-item{
+  @include circle(120px);
+  @include center;
+  border: 1px solid $main;
+  border-top-width: 4px;
+  border-bottom-width: 0;
+}
+
+.brand-img {
+  max-width: 90px;
+  max-height: 90px;
+  width: fit-content !important;
+  margin: 0 auto;
+  /* object-fit: cover; */
+}
+
+
+// car-card
+.car-card{
+  box-shadow: $main-shadow;
+  border-radius: 8px;
+  overflow: hidden;
+
+  .car-img{
+    @include center;
+    height: 200px;
+    position: relative;
+    .img{
+      display: block;
+      width: 90%;
+      max-width: 100%;
+      margin: 0 auto;
+      vertical-align: middle;
+    }
+  }
+
+  .content{
+    padding: 20px;
+
+    .car-name{
+      font-size: 18px;
+      color: $black;
+      font-family: fontDemi;
+      margin-bottom: 12px;
+    }
+
+    .items{
+      .item{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 10px;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+
+        .ic{
+          font-size: 14px;
+          color: $main;
+        }
+
+
+        .text{
+          font-size: 15px;
+          color: $main;
+        }
+      }
+    }
+  }
+
+  .car-btn{
+    height: 52px;
+    position: relative;
+
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 5px;
+      width: 100%;
+      background-color: $main;
+    }
+
+
+    .main-btn{
+      position: absolute;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      clip-path: polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%);
+      transition: all .4s ease;
+
+      &:hover{
+        color: $white !important;
+        // background-color: ;
+        opacity: .9;
+      }
+    }
+
+  }
+
+  &:hover .car-btn .main-btn{
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
