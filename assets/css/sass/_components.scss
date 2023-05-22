@@ -81,7 +81,7 @@
   .search-input{
     width: 100%;
     height: 100%;
-    padding: 8px 15px 8px 0;
+    padding: 8px 15px 8px;
     border: 1px solid rgba($color: #000000, $alpha: .1);
     // background-color: transparent;
     background-color: #f9f9f9;
@@ -96,6 +96,30 @@
     height: 100%;
     @include center;
     flex-shrink: 0;
+  }
+}
+
+.filter-con{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.filter-search{
+  width: 100px;
+}
+
+.input-serach{
+  width: 100%;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid $border-color;
+  display: block;
+  padding: 10px;
+  transition: $main-transition;
+
+  &:focus{
+    border-color: $main;
   }
 }
 
@@ -237,6 +261,14 @@
 
 .grid-4{
   @include grid(250px, 45px);
+
+  @media screen and (max-width:$screen-md) {
+    @include grid(210px, 20px);
+  }
+}
+
+.grid-3{
+  @include grid(230px, 30px);
 
   @media screen and (max-width:$screen-md) {
     @include grid(210px, 20px);
@@ -493,7 +525,7 @@
 
 .flex-card{
   display: flex;
-  gap: 25px;
+  gap: 40px;
 
   @media screen and (max-width:$screen-lg) {
     flex-direction: column;
@@ -507,7 +539,7 @@
 }
 
 .flex-1{
-  width: 366px;
+  width: 300px;
   @media screen and (max-width:$screen-lg) {
     width: 100%;
   }
@@ -515,7 +547,7 @@
 }
 
 .flex-3{
-  width: calc(100% - 366px);
+  width: calc(100% - 300px);
   overflow: hidden;
 
   @media screen and (max-width:$screen-lg) {
@@ -1016,6 +1048,12 @@
   .check-text{
     font-size: 15px;
     cursor: pointer;
+
+    .img{
+      max-width: 60px;
+      max-height: 40px;
+      @include dir-margin-left(10px);
+    }
   }
 
   &.form-check-m{
@@ -1209,7 +1247,7 @@
 
 /********************* Accordion *********************/
 .accordion-item{
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border: none;
 
   &:last-child{
@@ -1218,7 +1256,7 @@
 
   .accordion-button{
     background-color: $white3;
-    padding: 11px 8px;
+    padding: 14px 8px;
     font-size: 16px;
     border-radius: 3px;
     font-family: fontDemi;
@@ -1417,4 +1455,31 @@
 
 
 /********************* pagenation *********************/
+.pagination{
+  gap: 8px;
 
+  .page-item{
+    
+    .page-link{
+      border-radius: 5px;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+      @include center;
+      font-size: 15px;
+      transition: $main-transition;
+      margin: 0 !important;
+
+      &:focus{
+        box-shadow: unset;
+      }
+    }
+
+    &:hover, &.active{
+      .page-link{
+        background-color: $main;
+        color: $white;
+      }
+    }
+  }
+}

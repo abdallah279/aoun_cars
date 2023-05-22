@@ -27,7 +27,11 @@
 // Brands carousel
 .brands-carousel{
   background-color: #fff;
-  padding: 10px 0;
+  // padding: 10px 0;
+
+  .owl-stage-outer{
+    padding: 10px 0;
+  }
 }
 
 .brand-item{
@@ -38,9 +42,66 @@
   border-bottom-width: 0;
 }
 
+.client-item{
+  @include circle(130px);
+  @include center;
+  background-color: #f9f9f9;
+  box-shadow: $text-shadow;
+}
+
+
+.agency-item{
+  width: 130px;
+  height: 130px;
+  @include center;
+  position: relative;
+
+  &::after, &::before{
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 50%;
+    border: 2px solid rgba($color: #000000, $alpha: .1);
+    transition: $main-transition;
+  }
+
+  &::after{
+    bottom: 0;
+    @include dir-left(0);
+    border-top: none;
+    
+    #{$ltr} & {
+      border-right: none;
+    }
+    #{$rtl} & {
+      border-left: none;
+    }
+  }
+  
+  &::before{
+    top: 0;
+    @include dir-right(0);
+    border-bottom: none;
+
+    #{$ltr} & {
+      border-left: none;
+    }
+    #{$rtl} & {
+      border-right: none;
+    }
+  }
+
+  &:hover{
+    &::after, &::before{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
 .brand-img {
   max-width: 90px;
-  max-height: 90px;
+  max-height: 100px;
   width: fit-content !important;
   margin: 0 auto;
   /* object-fit: cover; */
@@ -89,13 +150,13 @@
 
         .ic{
           font-size: 14px;
-          color: $main;
+          // color: $main;
         }
 
 
         .text{
           font-size: 15px;
-          color: $main;
+          color: $black;
         }
       }
     }
@@ -137,5 +198,38 @@
 
   &:hover .car-btn .main-btn{
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+
+  &.offer{
+    
+    
+    background-color: #fefefe;
+    box-shadow: unset;
+    border: 1px solid rgba($color: #000000, $alpha: .1);
+    
+    #{$ltr} & {
+      border-radius: 5px 30px 5px 5px;
+    }
+    #{$rtl} & {
+      border-radius: 30px 5px 5px;
+    }
+
+    .car-btn{
+      padding: 0 15px 15px;
+      height: auto;
+
+      &::after{
+        display: none;
+      }
+
+      .main-btn{
+        position: unset;
+        clip-path: unset;
+        min-height: 46px;
+        border-radius: 5px;
+      }
+
+    }
   }
 }

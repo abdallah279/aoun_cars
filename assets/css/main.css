@@ -280,7 +280,7 @@ input:focus {
 .main-search .search-input {
   width: 100%;
   height: 100%;
-  padding: 8px 15px 8px 0;
+  padding: 8px 15px 8px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: #f9f9f9;
 }
@@ -295,6 +295,29 @@ input:focus {
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
+}
+
+.filter-con {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.filter-search {
+  width: 100px;
+}
+
+.input-serach {
+  width: 100%;
+  height: 38px;
+  border-radius: 5px;
+  border: 1px solid #D5D5D5;
+  display: block;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+.input-serach:focus {
+  border-color: #1D71B8;
 }
 
 .overlay-m {
@@ -432,6 +455,19 @@ input:focus {
 }
 @media screen and (max-width: 768px) {
   .grid-4 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 30px 20px;
+  }
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 45px 30px;
+}
+@media screen and (max-width: 768px) {
+  .grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
     gap: 30px 20px;
@@ -677,7 +713,7 @@ html[lang=ar] .main-title::after {
 
 .flex-card {
   display: flex;
-  gap: 25px;
+  gap: 40px;
 }
 @media screen and (max-width: 992px) {
   .flex-card {
@@ -691,7 +727,7 @@ html[lang=ar] .main-title::after {
 }
 
 .flex-1 {
-  width: 366px;
+  width: 300px;
 }
 @media screen and (max-width: 992px) {
   .flex-1 {
@@ -700,7 +736,7 @@ html[lang=ar] .main-title::after {
 }
 
 .flex-3 {
-  width: calc(100% - 366px);
+  width: calc(100% - 300px);
   overflow: hidden;
 }
 @media screen and (max-width: 992px) {
@@ -1213,6 +1249,16 @@ html[lang=ar] .select2-container--default .select2-selection--multiple .select2-
   font-size: 15px;
   cursor: pointer;
 }
+.check-box .check-text .img {
+  max-width: 60px;
+  max-height: 40px;
+}
+html[lang=en] .check-box .check-text .img {
+  margin-left: 10px;
+}
+html[lang=ar] .check-box .check-text .img {
+  margin-right: 10px;
+}
 .check-box.form-check-m input:checked + .check {
   background-color: #1D71B8;
 }
@@ -1384,7 +1430,7 @@ html[lang=ar] .modal-dialog .close-model-btn {
 
 /********************* Accordion *********************/
 .accordion-item {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   border: none;
 }
 .accordion-item:last-child {
@@ -1392,7 +1438,7 @@ html[lang=ar] .modal-dialog .close-model-btn {
 }
 .accordion-item .accordion-button {
   background-color: #FAFAFA;
-  padding: 11px 8px;
+  padding: 14px 8px;
   font-size: 16px;
   border-radius: 3px;
   font-family: fontDemi;
@@ -1560,6 +1606,29 @@ html[lang=ar] .dropdown-menu.drop-filter.show {
 }
 
 /********************* pagenation *********************/
+.pagination {
+  gap: 8px;
+}
+.pagination .page-item .page-link {
+  border-radius: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  margin: 0 !important;
+}
+.pagination .page-item .page-link:focus {
+  box-shadow: unset;
+}
+.pagination .page-item:hover .page-link, .pagination .page-item.active .page-link {
+  background-color: #1D71B8;
+  color: #fff;
+}
+
 .header-m {
   background: #fff;
   position: relative;
@@ -2054,6 +2123,8 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
 
 .brands-carousel {
   background-color: #fff;
+}
+.brands-carousel .owl-stage-outer {
   padding: 10px 0;
 }
 
@@ -2069,9 +2140,73 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
   border-bottom-width: 0;
 }
 
+.client-item {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 2px rgba(22, 22, 22, 0.1);
+}
+
+.agency-item {
+  width: 130px;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.agency-item::after, .agency-item::before {
+  position: absolute;
+  content: "";
+  width: 50%;
+  height: 50%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+.agency-item::after {
+  bottom: 0;
+  border-top: none;
+}
+html[lang=en] .agency-item::after {
+  left: 0;
+}
+html[lang=ar] .agency-item::after {
+  right: 0;
+}
+html[lang=en] .agency-item::after {
+  border-right: none;
+}
+html[lang=ar] .agency-item::after {
+  border-left: none;
+}
+.agency-item::before {
+  top: 0;
+  border-bottom: none;
+}
+html[lang=en] .agency-item::before {
+  right: 0;
+}
+html[lang=ar] .agency-item::before {
+  left: 0;
+}
+html[lang=en] .agency-item::before {
+  border-left: none;
+}
+html[lang=ar] .agency-item::before {
+  border-right: none;
+}
+.agency-item:hover::after, .agency-item:hover::before {
+  width: 100%;
+  height: 100%;
+}
+
 .brand-img {
   max-width: 90px;
-  max-height: 90px;
+  max-height: 100px;
   width: -moz-fit-content !important;
   width: fit-content !important;
   margin: 0 auto;
@@ -2117,11 +2252,10 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
 }
 .car-card .content .items .item .ic {
   font-size: 14px;
-  color: #1D71B8;
 }
 .car-card .content .items .item .text {
   font-size: 15px;
-  color: #1D71B8;
+  color: #202020;
 }
 .car-card .car-btn {
   height: 52px;
@@ -2154,4 +2288,29 @@ html[lang=ar] .footer .foot-content .footer-links .link:hover {
 .car-card:hover .car-btn .main-btn {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.car-card.offer {
+  background-color: #fefefe;
+  box-shadow: unset;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+html[lang=en] .car-card.offer {
+  border-radius: 5px 30px 5px 5px;
+}
+html[lang=ar] .car-card.offer {
+  border-radius: 30px 5px 5px;
+}
+.car-card.offer .car-btn {
+  padding: 0 15px 15px;
+  height: auto;
+}
+.car-card.offer .car-btn::after {
+  display: none;
+}
+.car-card.offer .car-btn .main-btn {
+  position: unset;
+  -webkit-clip-path: unset;
+          clip-path: unset;
+  min-height: 46px;
+  border-radius: 5px;
 }/*# sourceMappingURL=main.css.map */
