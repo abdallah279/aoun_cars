@@ -1,7 +1,7 @@
 .footer{
     padding: 40px 0;
     background-color: $white;
-    box-shadow: $nav-shadow;
+    box-shadow: $main-shadow;
 
     .footer-logo{
         text-align: center;
@@ -88,52 +88,32 @@
                 }
             }
         }
+
+        .app{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+
+            .app-link{
+                .img{
+                    width: 135px;
+                    height: 40px;
+                    object-fit: cover;
+                }
+            }
+        }
     }
 }
 
 .copy-right{
-    padding: 10px;
+    padding: 18px;
     border-top: 1px solid $border-color;
-    position: relative;
-    z-index: 5;
     background-color: #fff;
-
-    .down-footer{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        font-size: 14px;
-
-        @media screen and (max-width : $screen-md) {
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .right-spe{
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            font-size: 13px;
-
-            .footer-new-img{
-                max-width: 70px;
-                margin-bottom: 12px;
-            }
-
-            .links-spe{
-                display: flex;
-                gap: 6px;
-                align-items: center;
-                a{
-                    text-decoration: none;
-                    transition: all 0.4s ease-in-out;
-
-                    &:hover{
-                        color: $main;
-                    }
-                }
-            }
-        }
+    
+    .text{
+        font-size: 15px;
+        text-align: center;
     }
 }

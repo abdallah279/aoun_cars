@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عون</title>
+    <link rel="shortcut icon" href="./assets/imgs/logo.png" type="image/x-icon">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Bootstrap 5 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.rtl.min.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/plugins/OwlCarousel2-2.3.4/dist_2/assets/owl.theme.default.min.css">
+    <!-- Select 2 -->
+    <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css">
+    <!-- fancybox -->
+    <link rel="stylesheet" href="./assets/plugins/FancyBox/jquery.fancybox.min.css">
+
+    <!-- Style Css -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+
+    <!-- start to loader -->
+    <div class="loader-container">
+        <div id="loader">
+            <div id="logo">
+                <img src="./assets/imgs/logo.png" alt="">
+            </div>
+            <div id="progressbar"></div>
+        </div>
+    </div>
+
+
+
+    <!-- Start Header -->
+    <header class="header-m">
+        <div class="container">
+            <div class="head-down-con">
+
+                <a href="index.html">
+                    <img src="assets/imgs/logo.png" alt="logo" class="logo">
+                </a>
+    
+                <form action="" class="main-search">
+                    <input type="text" placeholder="ابحث عن ما تريد" class="search-input">
+                    <button type="submit" class="search-icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+
+                <div class="dropdown">
+                    <button type="button" class="head-lang dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="lang">العربية</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </button>
+
+                    <!-- DropDown -->
+                    <ul class="dropdown-menu drop-lang left shadow">
+                        <li>
+                            <a href="#" class="lang-item">العربية</a>
+                        </li>
+                        <li>
+                            <a href="#" class="lang-item">الانجليزية</a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+    <!-- End Header -->
+
+
+
+    <!-- Start Navbar -->
+    <nav class="navbar-m">
+        <div class="container">
+            <div class="navbar-content">
+
+                <!-- Icons Mobile -->
+                <div class="mobile-buttons">
+                    <button type="button" class="mobile-btn side-open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button type="button" class="mobile-btn search-open">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+
+                <!-- Navbar Links -->
+                <div class="links">
+                    <a href="index.html" class="logo">
+                        <img src="assets/imgs/logo.png" alt="logo">
+                    </a>
+                    <img src="assets/imgs/icons/close.png" alt="" class="close">
+                    <a href="index.html" class="link link-ac" title="الرئيسية">الرئيسية</a>
+                    <a href="brands.html" class="link link-ac" title="الماركات">الماركات</a>
+                    <a href="cars.html" class="link link-ac" title="السيارات">السيارات</a>
+                    <a href="services.html" class="link link-ac" title="الخدمات">الخدمات</a>
+                    <a href="common-questions.html" class="link link-ac" title="الاسئلة الشائعة">الاسئلة الشائعة</a>
+                    <a href="about.html" class="link link-ac" title="عنا">عنا</a>
+
+
+                    <a href="contact-us.html" class="link link-ac" title="تواصل معنا">تواصل معنا</a>
+                    <a href="index.html#clients" class="link" title="عملائنا">عملائنا</a>
+                    <a href="index.html#agencies" class="link" title="جهات التمويل">جهات التمويل</a>
+                    <a href="#" class="link" title="فروعنا">فروعنا</a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar -->
+
+
+    <!-- Start Page Header -->
+    <div class="page-header">
+        <img src="./assets/imgs/page-bg.jpg" alt="" class="page-bg">
+        <div class="container">
+            <h1 class="page-name">السيارات</h1>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+
+    <!-- Start Cars Section -->
+    <div class="cars-section main-padding">
+        <div class="container">
+
+            <div class="open-filter mb-5">
+                <img src="./assets/imgs/icons/bulleted-list.png" alt="" class="img">
+            </div>
+
+            <div class="flex-card">
+
+                <div class="flex-1">
+
+                    <!-- Accordion -->
+                    <div class="accordion" id="accordion">
+
+                        <div class="accordion-item">
+
+                            <!-- Header -->
+                            <h2 class="accordion-header" id="heading1">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseTwo">
+                                    الماركات
+                                </button>
+                            </h2>
+
+                            <!-- Content -->
+                            <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1" data-bs-parent="#accordion">
+                                <div class="accordion-body check-boxs">
+
+                                    <input type="text" class="input-serach mb-3" placeholder="ابحث..">
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt32Maz">
+                                        <label class="check" for="allcunt32Maz"></label>
+                                        <label class="check-text" for="allcunt32Maz">
+                                            اكسيد
+                                            <img src="./assets/imgs/brand_2.png" alt="" class="img">
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt02Maz">
+                                        <label class="check" for="allcunt02Maz"></label>
+                                        <label class="check-text" for="allcunt02Maz">
+                                            ام جى 
+                                            <img src="./assets/imgs/brand_7.png" alt="" class="img">
+                                        </label>
+                                    </div>
+                                    
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt12Maz">
+                                        <label class="check" for="allcunt12Maz"></label>
+                                        <label class="check-text" for="allcunt12Maz">
+                                            فيات 
+                                            <img src="./assets/imgs/brand_3.png" alt="" class="img">
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-item">
+
+                            <!-- Header -->
+                            <h2 class="accordion-header" id="heading2">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseTwo">
+                                    الموديل
+                                </button>
+                            </h2>
+
+                            <!-- Content -->
+                            <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2" data-bs-parent="#accordion">
+                                <div class="accordion-body check-boxs">
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt32Maz">
+                                        <label class="check" for="allcunt32Maz"></label>
+                                        <label class="check-text" for="allcunt32Maz">
+                                            5
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt02Maz">
+                                        <label class="check" for="allcunt02Maz"></label>
+                                        <label class="check-text" for="allcunt02Maz">
+                                            10
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt12Maz">
+                                        <label class="check" for="allcunt12Maz"></label>
+                                        <label class="check-text" for="allcunt12Maz">
+                                            25 
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-item">
+
+                            <!-- Header -->
+                            <h2 class="accordion-header" id="heading3">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapseTwo">
+                                    نوع الجر
+                                </button>
+                            </h2>
+
+                            <!-- Content -->
+                            <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="heading3" data-bs-parent="#accordion">
+                                <div class="accordion-body check-boxs">
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt32Maz">
+                                        <label class="check" for="allcunt32Maz"></label>
+                                        <label class="check-text" for="allcunt32Maz">
+                                            دفع امامى
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt02Maz">
+                                        <label class="check" for="allcunt02Maz"></label>
+                                        <label class="check-text" for="allcunt02Maz">
+                                            دفع خلفى
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt12Maz">
+                                        <label class="check" for="allcunt12Maz"></label>
+                                        <label class="check-text" for="allcunt12Maz">
+                                            دفع رباعى
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-item">
+
+                            <!-- Header -->
+                            <h2 class="accordion-header" id="heading4">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapseTwo">
+                                    نوع هيكل السيارة
+                                </button>
+                            </h2>
+
+                            <!-- Content -->
+                            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4" data-bs-parent="#accordion">
+                                <div class="accordion-body check-boxs">
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt32Maz">
+                                        <label class="check" for="allcunt32Maz"></label>
+                                        <label class="check-text" for="allcunt32Maz">
+                                            سيدان
+                                            <img src="./assets/imgs/sedanCarBody.png" alt="" class="img">
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt02Maz">
+                                        <label class="check" for="allcunt02Maz"></label>
+                                        <label class="check-text" for="allcunt02Maz">
+                                            هاتشباك
+                                            <img src="./assets/imgs/hatchbackCarBody.png" alt="" class="img">
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt12Maz">
+                                        <label class="check" for="allcunt12Maz"></label>
+                                        <label class="check-text" for="allcunt12Maz">
+                                            دفع رباعى
+                                            <img src="./assets/imgs/jeepCarBody.png" alt="" class="img">
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt12Maz">
+                                        <label class="check" for="allcunt12Maz"></label>
+                                        <label class="check-text" for="allcunt12Maz">
+                                            عائلى
+                                            <img src="./assets/imgs/FamiliarCarBody.png" alt="" class="img">
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt12Maz">
+                                        <label class="check" for="allcunt12Maz"></label>
+                                        <label class="check-text" for="allcunt12Maz">
+                                            سيارة نقل
+                                            <img src="./assets/imgs/vanCarBody.png" alt="" class="img">
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-item">
+
+                            <!-- Header -->
+                            <h2 class="accordion-header" id="heading5">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapseTwo">
+                                    نوع التنجيد
+                                </button>
+                            </h2>
+
+                            <!-- Content -->
+                            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5" data-bs-parent="#accordion">
+                                <div class="accordion-body check-boxs">
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt32Maz">
+                                        <label class="check" for="allcunt32Maz"></label>
+                                        <label class="check-text" for="allcunt32Maz">
+                                            مخمل
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt02Maz">
+                                        <label class="check" for="allcunt02Maz"></label>
+                                        <label class="check-text" for="allcunt02Maz">
+                                            جلد
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-item">
+
+                            <!-- Header -->
+                            <h2 class="accordion-header" id="heading6">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapseTwo">
+                                    نوع الوقود
+                                </button>
+                            </h2>
+
+                            <!-- Content -->
+                            <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6" data-bs-parent="#accordion">
+                                <div class="accordion-body check-boxs">
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt32Maz">
+                                        <label class="check" for="allcunt32Maz"></label>
+                                        <label class="check-text" for="allcunt32Maz">
+                                            بنزين
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt02Maz">
+                                        <label class="check" for="allcunt02Maz"></label>
+                                        <label class="check-text" for="allcunt02Maz">
+                                            ديزل
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt02Maz">
+                                        <label class="check" for="allcunt02Maz"></label>
+                                        <label class="check-text" for="allcunt02Maz">
+                                            هايبرد
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-item">
+
+                            <!-- Header -->
+                            <h2 class="accordion-header" id="heading7">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapseTwo">
+                                    سنة التصنيع
+                                </button>
+                            </h2>
+
+                            <!-- Content -->
+                            <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7" data-bs-parent="#accordion">
+                                <div class="accordion-body check-boxs">
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt32Maz">
+                                        <label class="check" for="allcunt32Maz"></label>
+                                        <label class="check-text" for="allcunt32Maz">
+                                            2010
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt02Maz">
+                                        <label class="check" for="allcunt02Maz"></label>
+                                        <label class="check-text" for="allcunt02Maz">
+                                            2013
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt02Maz">
+                                        <label class="check" for="allcunt02Maz"></label>
+                                        <label class="check-text" for="allcunt02Maz">
+                                            2023
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-item">
+
+                            <!-- Header -->
+                            <h2 class="accordion-header" id="heading8">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapseTwo">
+                                    سعة المحرك
+                                </button>
+                            </h2>
+
+                            <!-- Content -->
+                            <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8" data-bs-parent="#accordion">
+                                <div class="accordion-body check-boxs">
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt32Maz">
+                                        <label class="check" for="allcunt32Maz"></label>
+                                        <label class="check-text" for="allcunt32Maz">
+                                            1.5
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt02Maz">
+                                        <label class="check" for="allcunt02Maz"></label>
+                                        <label class="check-text" for="allcunt02Maz">
+                                            2.0
+                                        </label>
+                                    </div>
+
+                                    <div class="check-box">
+                                        <input type="checkbox" name="" id="allcunt02Maz">
+                                        <label class="check" for="allcunt02Maz"></label>
+                                        <label class="check-text" for="allcunt02Maz">
+                                            2.4
+                                        </label>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="accordion-item">
+
+                            <!-- Header -->
+                            <h2 class="accordion-header" id="heading9">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapseTwo">
+                                    Price
+                                </button>
+                            </h2>
+
+                            <!-- Content -->
+                            <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9" data-bs-parent="#accordion">
+                                <div class="accordion-body">
+
+                                    <div class="filter-con">
+
+                                        <div class="filter-search sm">
+                                            <span class="d-block fs-14 c-black mb-2">من</span>
+                                            <input type="text" class="input-serach">
+                                        </div>
+
+                                        <div class="filter-search sm">
+                                            <span class="d-block fs-14 c-black mb-2">الى</span>
+                                            <input type="text" class="input-serach">
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="flex-3 p-1">
+
+                    <div class="cards-container grid-3">
+            
+                        <!-- Card -->
+                        <div class="car-card">
+        
+                            <div class="car-img">
+                                <img src="assets/imgs/car_1.png" alt="" class="img">
+                                <span class="type-p"> 
+                                    <span class="transparent"></span> 
+                                    <span class="text">جديد</span>
+                                </span>
+        
+                                <div class="live-p">خصم</div>
+                            </div>
+        
+                            <div class="content">
+                                <div class="car-name">ام جي 5 STD 2022</div>
+        
+                                <div class="items">
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">دفع رباعي</span>
+                                    </div>
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">3.5 لتر</span>
+                                    </div>
+        
+                                </div>
+                                
+                                <div class="price-con mt-2">
+                                    <div class="price">500 ر.س</div>
+                                    <div class="old-price">500 ر.س</div>
+                                </div>
+                                
+                            </div>
+        
+                            <div class="car-btn">
+                                <a href="car-detailes.html" class="main-btn">عرض المزيد</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card -->
+                        <div class="car-card">
+        
+                            <div class="car-img">
+                                <img src="assets/imgs/car_2.png" alt="" class="img">
+                                <span class="type-p"> 
+                                    <span class="transparent"></span> 
+                                    <span class="text">جديد</span>
+                                </span>
+                            </div>
+        
+                            <div class="content">
+                                <div class="car-name">ام جي 5 STD 2022</div>
+        
+                                <div class="items">
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">دفع رباعي</span>
+                                    </div>
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">3.5 لتر</span>
+                                    </div>
+        
+                                </div>
+                                
+                                <div class="price-con mt-2">
+                                    <div class="price">500 ر.س</div>
+                                    <div class="old-price">500 ر.س</div>
+                                </div>
+                                
+                            </div>
+        
+                            <div class="car-btn">
+                                <a href="car-detailes.html" class="main-btn">عرض المزيد</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card -->
+                        <div class="car-card">
+        
+                            <div class="car-img">
+                                <img src="assets/imgs/car_4.png" alt="" class="img">
+                                <span class="type-p"> 
+                                    <span class="transparent"></span> 
+                                    <span class="text">جديد</span>
+                                </span>
+                            </div>
+        
+                            <div class="content">
+                                <div class="car-name">ام جي 5 STD 2022</div>
+        
+                                <div class="items">
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">دفع رباعي</span>
+                                    </div>
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">3.5 لتر</span>
+                                    </div>
+        
+                                </div>
+                                
+                                <div class="price-con mt-2">
+                                    <div class="price">500 ر.س</div>
+                                    <div class="old-price">500 ر.س</div>
+                                </div>
+                                
+                            </div>
+        
+                            <div class="car-btn">
+                                <a href="car-detailes.html" class="main-btn">عرض المزيد</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card -->
+                        <div class="car-card">
+        
+                            <div class="car-img">
+                                <img src="assets/imgs/car_5.png" alt="" class="img">
+                                <span class="type-p"> 
+                                    <span class="transparent"></span> 
+                                    <span class="text">جديد</span>
+                                </span>
+                            </div>
+        
+                            <div class="content">
+                                <div class="car-name">ام جي 5 STD 2022</div>
+        
+                                <div class="items">
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">دفع رباعي</span>
+                                    </div>
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">3.5 لتر</span>
+                                    </div>
+        
+                                </div>
+                                
+                                <div class="price-con mt-2">
+                                    <div class="price">500 ر.س</div>
+                                    <div class="old-price">500 ر.س</div>
+                                </div>
+                                
+                            </div>
+        
+                            <div class="car-btn">
+                                <a href="car-detailes.html" class="main-btn">عرض المزيد</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card -->
+                        <div class="car-card">
+        
+                            <div class="car-img">
+                                <img src="assets/imgs/car_6.png" alt="" class="img">
+                                <span class="type-p"> 
+                                    <span class="transparent"></span> 
+                                    <span class="text">جديد</span>
+                                </span>
+                            </div>
+        
+                            <div class="content">
+                                <div class="car-name">ام جي 5 STD 2022</div>
+        
+                                <div class="items">
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">دفع رباعي</span>
+                                    </div>
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">3.5 لتر</span>
+                                    </div>
+        
+                                </div>
+                                
+                                <div class="price-con mt-2">
+                                    <div class="price">500 ر.س</div>
+                                    <div class="old-price">500 ر.س</div>
+                                </div>
+                                
+                            </div>
+        
+                            <div class="car-btn">
+                                <a href="car-detailes.html" class="main-btn">عرض المزيد</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card -->
+                        <div class="car-card">
+        
+                            <div class="car-img">
+                                <img src="assets/imgs/car_5.png" alt="" class="img">
+                                <span class="type-p"> 
+                                    <span class="transparent"></span> 
+                                    <span class="text">جديد</span>
+                                </span>
+                            </div>
+        
+                            <div class="content">
+                                <div class="car-name">ام جي 5 STD 2022</div>
+        
+                                <div class="items">
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">دفع رباعي</span>
+                                    </div>
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">3.5 لتر</span>
+                                    </div>
+        
+                                </div>
+                                
+                                <div class="price-con mt-2">
+                                    <div class="price">500 ر.س</div>
+                                    <div class="old-price">500 ر.س</div>
+                                </div>
+                                
+                            </div>
+        
+                            <div class="car-btn">
+                                <a href="car-detailes.html" class="main-btn">عرض المزيد</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card -->
+                        <div class="car-card">
+        
+                            <div class="car-img">
+                                <img src="assets/imgs/car_5.png" alt="" class="img">
+                                <span class="type-p"> 
+                                    <span class="transparent"></span> 
+                                    <span class="text">جديد</span>
+                                </span>
+                            </div>
+        
+                            <div class="content">
+                                <div class="car-name">ام جي 5 STD 2022</div>
+        
+                                <div class="items">
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">دفع رباعي</span>
+                                    </div>
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">3.5 لتر</span>
+                                    </div>
+        
+                                </div>
+                                
+                                <div class="price-con mt-2">
+                                    <div class="price">500 ر.س</div>
+                                    <div class="old-price">500 ر.س</div>
+                                </div>
+                                
+                            </div>
+        
+                            <div class="car-btn">
+                                <a href="car-detailes.html" class="main-btn">عرض المزيد</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card -->
+                        <div class="car-card">
+        
+                            <div class="car-img">
+                                <img src="assets/imgs/car_3.png" alt="" class="img">
+                                <span class="type-p"> 
+                                    <span class="transparent"></span> 
+                                    <span class="text">جديد</span>
+                                </span>
+                            </div>
+        
+                            <div class="content">
+                                <div class="car-name">ام جي 5 STD 2022</div>
+        
+                                <div class="items">
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">دفع رباعي</span>
+                                    </div>
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">3.5 لتر</span>
+                                    </div>
+        
+                                </div>
+                                
+                                <div class="price-con mt-2">
+                                    <div class="price">500 ر.س</div>
+                                    <div class="old-price">500 ر.س</div>
+                                </div>
+                                
+                            </div>
+        
+                            <div class="car-btn">
+                                <a href="car-detailes.html" class="main-btn">عرض المزيد</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Card -->
+                        <div class="car-card">
+        
+                            <div class="car-img">
+                                <img src="assets/imgs/car_2.png" alt="" class="img">
+                                <span class="type-p"> 
+                                    <span class="transparent"></span> 
+                                    <span class="text">جديد</span>
+                                </span>
+                            </div>
+        
+                            <div class="content">
+                                <div class="car-name">ام جي 5 STD 2022</div>
+        
+                                <div class="items">
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">دفع رباعي</span>
+                                    </div>
+        
+                                    <div class="item">
+                                        <i class="fa-solid fa-car ic"></i>
+                                        <span class="text">3.5 لتر</span>
+                                    </div>
+        
+                                </div>
+                                
+                                <div class="price-con mt-2">
+                                    <div class="price">500 ر.س</div>
+                                    <div class="old-price">500 ر.س</div>
+                                </div>
+                                
+                            </div>
+        
+                            <div class="car-btn">
+                                <a href="car-detailes.html" class="main-btn">عرض المزيد</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <nav aria-label="Page navigation example" class="mt-5">
+                        <ul class="pagination justify-content-center">
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                              <span aria-hidden="true"><i class="fa-solid fa-angle-right"></i></span>
+                            </a>
+                          </li>
+                          <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                          <li class="page-item"><a class="page-link" href="#">2</a></li>
+                          <li class="page-item"><a class="page-link" href="#">3</a></li>
+                          <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                              <span aria-hidden="true"><i class="fa-solid fa-angle-left"></i></span>
+                            </a>
+                          </li>
+                        </ul>
+                    </nav>
+                    
+                </div>
+    
+            </div>
+
+        </div>
+    </div>
+    <!-- End Cars Section -->
+
+
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer-cards gy-4">
+
+                <!-- Footer Logo And Social -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="footer-logo">
+
+                        <!-- Logo -->
+                        <a href="index.html" class="foot-logo-img">
+                            <img src="assets/imgs/logo.png" alt="footer logo">
+                        </a>
+
+                        <p class="footer-info">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس
+                            لقد تم توليد هذا النص من مولد النص العربى، حيث
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="foot-content">
+                        <h3 class="footer-head">روابط سريعة</h3>
+                        <ul class="footer-links">
+
+                            <a href="index.html" class="link" title="الرئيسية">الرئيسية</a>
+                            <a href="brands.html" class="link" title="الماركات">الماركات</a>
+                            <a href="cars.html" class="link" title="السيارات">السيارات</a>
+                            <a href="services.html" class="link" title="الخدمات">الخدمات</a>
+                            <a href="common-questions.html" class="link" title="الاسئلة الشائعة">الاسئلة الشائعة</a>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Links -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="foot-content">
+                        <h3 class="footer-head">روابط سريعة</h3>
+                        <ul class="footer-links">
+                            <a href="about.html" class="link" title="عنا">عنا</a>
+                            <a href="contact-us.html" class="link" title="تواصل معنا">تواصل معنا</a>
+                            <a href="index.html#clients" class="link" title="عملائنا">عملائنا</a>
+                            <a href="index.html#agencies" class="link" title="جهات التمويل">جهات التمويل</a>
+                            <a href="#" class="link" title="فروعنا">فروعنا</a>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Footer Contact -->
+                <div class="col-lg-3 col-md-6 col-12">
+                    <div class="foot-content">
+                        <h3 class="footer-head">تواصل معنا</h3>
+                        <ul class="footer-links">
+                            <a href="mailto:Aon@Aon.com" class="link">
+                                <img src="assets/imgs/icons/send (2).png" alt="">
+                                Aon@Aon.com
+                            </a>
+                            <a href="tel:96767554" class="link">
+                                <img src="assets/imgs/icons/telephone2.png" alt="">
+                                96767554
+                            </a>
+                        </ul>
+                        <div class="app">
+                            <a href="#" class="app-link">
+                                <img src="./assets/imgs/appstore.svg" alt="" class="img">
+                            </a>
+                            <a href="#" class="app-link">
+                                <img src="./assets/imgs/playstore.svg" alt="" class="img">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+
+
+    <!-- Start Copy Right -->
+    <div class="copy-right">
+        <div class="container">
+
+            <div class="text">جميع الحقوق محفوظة لشركة عون للسيارات</div>
+
+        </div>
+    </div>
+    <!-- End Copy Right -->
+
+
+    <div class="overlay-m"></div>
+
+    <div class="up-btn">
+        <i class="fa-solid fa-chevron-up"></i>
+    </div>
+
+
+
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Jquery -->
+    <script src="assets/plugins/jquery/jquery-3.5.1.min.js"></script>
+    <!-- Owl Carousel -->
+    <script src="./assets/plugins/OwlCarousel2-2.3.4/dist_2/owl.carousel.min.js"></script>
+    <!-- Select 2 -->
+    <script src="./assets/plugins/select2/select2.js"></script>
+    <!-- fancybox -->
+    <script src="./assets/plugins/FancyBox/jquery.fancybox.min.js"></script>
+
+    <!-- Main Js -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

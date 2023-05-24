@@ -56,7 +56,7 @@
         &::before {
             width: 40px;
             position:relative;
-            left: -10px;
+            left: -100px;
             background-color: $main;
             content: ' ';
             display: block;
@@ -69,14 +69,56 @@
   
 }
 
+.up-btn{
+  background-color: $main;
+  color: $white;
+  position: fixed;
+  z-index: 777;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+  @include center;
+  cursor: pointer;
+  @include dir-right(15px);
+  bottom: -100px;
+  transition: opacity .9s, bottom .3s;
+  opacity: 0;
+  overflow: hidden;
+
+  &.active{
+    opacity: 1;
+    bottom: 15px;
+  }
+}
+
 
 .main-search{
   width: 340px;
   height: 46px;
   overflow: hidden;
-  border-radius: 5px;
+  // border-radius: 5px;
   position: relative;
   @include between;
+
+
+  @media screen and (max-width:$screen-lg) {
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-200px);
+    z-index: 1000;
+    background-color: $white;
+    padding: 20px;
+    border-radius: 8px;
+    transition: all .8s cubic-bezier(0.68, -0.30, 0.265, 1.3);
+    height: auto;
+    width: auto;
+
+    &.active{
+      transform: translateX(-50%) translateY(0);
+    }
+  }
   
   .search-input{
     width: 100%;
@@ -85,6 +127,25 @@
     border: 1px solid rgba($color: #000000, $alpha: .1);
     // background-color: transparent;
     background-color: #f9f9f9;
+    #{$ltr} & {
+      border-radius: 5px 0px 0 5px;
+    }
+    #{$rtl} & {
+      border-radius: 0 5px 5px 0;
+    }
+    
+    @media screen and (max-width:$screen-lg) {
+      width: 340px;
+      height: 46px;
+    }
+    
+    @media screen and (max-width:$screen-xs) {
+      width: 300px;
+    }
+    
+    @media screen and (max-width:$screen-xxs) {
+      width: 240px;
+    }
   }
   
   .search-icon{
@@ -96,6 +157,16 @@
     height: 100%;
     @include center;
     flex-shrink: 0;
+    #{$ltr} & {
+      border-radius: 0 5px 5px 0;
+    }
+    #{$rtl} & {
+      border-radius: 5px 0px 0 5px;
+    }
+
+    @media screen and (max-width:$screen-lg) {
+      height: 46px;
+    }
   }
 }
 
@@ -139,32 +210,17 @@
 // Dots Slider
 .owl-dots{
   @include center;
-  gap: 10px;
-  position: absolute !important;
-  bottom: 20px;
-  left: 0;
+  gap: 6px;
   width: 100%;
-  z-index: 3;
+  margin-top: 40px;
 
   .owl-dot{
-      width: 18px;
-      height: 8px;
-      border-radius: 10px;
-      opacity: .5;
-      background-color: $white !important;
-
-      @media screen and (max-width:$screen-md) {
-          height: 7px;
-          width: 15px;
-      }
+      @include circle(10px);
+      opacity: .3;
+      background-color: $main !important;
 
       &.active{
-          width: 35px;
           opacity: 1;
-
-          @media screen and (max-width:$screen-md) {
-              width: 30px;
-          }
       }
   }
   
@@ -556,17 +612,17 @@
 }
 
 .bg-light{
-  background-color: $white3;
+  background-color: #fbfbfb;
 }
 
 
 .desc{
-  font-size: 14px;
-  color: $light;
+  font-size: 15px;
+  color: $black;
   line-height: 1.9;
 
   @media screen and (max-width:$screen-xs) {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.6;
   }
 
@@ -1473,6 +1529,12 @@
       &:focus{
         box-shadow: unset;
       }
+
+      i{
+        #{$ltr} & {
+          transform: rotate(-180deg);
+        }
+      }
     }
 
     &:hover, &.active{
@@ -1481,5 +1543,75 @@
         color: $white;
       }
     }
+  }
+}
+
+
+/********************* Start FAQ section *********************/
+.faq-collapse{
+  margin-bottom: 15px;
+  
+  .faq-open{
+    @include between;
+    padding: 15px 25px;
+    background-color: #f9f9f9;
+    color: $black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: $main-transition;
+
+    i{
+      transition: $main-transition;
+    }
+  }
+
+  .faq-content{
+    padding: 15px 25px;
+    background-color: #FAFAFA;
+    color: $black;
+    font-size: 16px;
+    line-height: 1.9;
+    display: none;
+
+  }
+
+  &.active{
+
+    .faq-open{
+      background-color: rgba($color: $main, $alpha: .6);
+      // background-color: #FAFAFA;
+      color: #fff;
+      margin-bottom: 8px;
+  
+      i{
+        transform: rotateX(180deg);
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width:600px) {
+  .faq-open{
+      padding: 12px 15px;
+      font-size: 16px;
+  }
+
+  .faq-content{
+      padding: 15px;
+      font-size: 15px;
+  }
+}
+
+
+.faq-item{
+  background-color: #f9f9f9;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &:nth-child(even){
+    background-color: #f2f2f2;
   }
 }
