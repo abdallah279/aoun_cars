@@ -686,14 +686,14 @@
   align-items: center;
   gap: 30px;
   padding: 12px 15px;
-  background-color: #e4e7eb;
+  background-color: $main;
   margin-bottom: 15px;
   border-radius: 5px;
   overflow: hidden;
 
   .title{
     font-size: 16px;
-    color: $black;
+    color: $white;
     font-family: fontDemi;
   }
 
@@ -707,7 +707,7 @@
       // background-color: $main;
       @include circle(24px);
       // box-shadow: 1px 1px 1px rgba($color: #000000, $alpha: .4);
-      box-shadow: 0px 0px 3px #c2000b;
+      // box-shadow: 0px 0px 3px #c2000b;
       cursor: pointer;
       position: relative;
       

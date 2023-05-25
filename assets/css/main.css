@@ -2852,14 +2852,14 @@ html[lang=ar] .about-logo-con .about-logo {
   align-items: center;
   gap: 30px;
   padding: 12px 15px;
-  background-color: #e4e7eb;
+  background-color: #1D71B8;
   margin-bottom: 15px;
   border-radius: 5px;
   overflow: hidden;
 }
 .colors-head .title {
   font-size: 16px;
-  color: #202020;
+  color: #fff;
   font-family: fontDemi;
 }
 .colors-head .colors {
@@ -2872,7 +2872,6 @@ html[lang=ar] .about-logo-con .about-logo {
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  box-shadow: 0px 0px 3px #c2000b;
   cursor: pointer;
   position: relative;
 }
