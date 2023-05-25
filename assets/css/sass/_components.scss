@@ -851,10 +851,6 @@
     border: 1px solid $border-color;
     box-shadow: $main-shadow;
 
-    @media screen and (max-width:$screen-xs) {
-      min-height: 44px;
-    }
-
     &.photo-input{
       display: flex;
       align-items: center;
@@ -867,10 +863,6 @@
       font-size: 14px;
       color: $placholder-color;
       transition: $main-transition; 
-
-      @media screen and (max-width:$screen-xs) {
-        font-size: 12px;
-      }
     }
 
     &:focus{

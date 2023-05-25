@@ -1054,11 +1054,6 @@ html[lang=ar] .live-p {
   border: 1px solid #D5D5D5;
   box-shadow: 0 0 8px 0 rgba(32, 32, 32, 0.1);
 }
-@media screen and (max-width: 425px) {
-  .main-input .input-me {
-    min-height: 44px;
-  }
-}
 .main-input .input-me.photo-input {
   display: flex;
   align-items: center;
@@ -1076,14 +1071,6 @@ html[lang=ar] .live-p {
   font-size: 14px;
   color: #adabab;
   transition: all 0.3s ease;
-}
-@media screen and (max-width: 425px) {
-  .main-input .input-me::-moz-placeholder {
-    font-size: 12px;
-  }
-  .main-input .input-me::placeholder {
-    font-size: 12px;
-  }
 }
 .main-input .input-me:focus {
   border-color: #1D71B8;
