@@ -782,6 +782,12 @@
     gap: 10px;
     color: $black;
     font-size: 15px;
+
+    i{
+      #{$ltr} & {
+        transform: rotate(-180deg);
+      }
+    }
   }
 }
 

@@ -2952,6 +2952,9 @@ html[lang=ar] .about-logo-con .about-logo {
   color: #202020;
   font-size: 15px;
 }
+html[lang=en] .car-imgs .item i {
+  transform: rotate(-180deg);
+}
 
 .social-items {
   display: flex;
