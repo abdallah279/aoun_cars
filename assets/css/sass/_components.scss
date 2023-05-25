@@ -94,8 +94,8 @@
 
 
 .main-search{
-  width: 340px;
-  height: 46px;
+  width: 350px;
+  height: 48px;
   overflow: hidden;
   // border-radius: 5px;
   position: relative;
@@ -146,6 +146,11 @@
     @media screen and (max-width:$screen-xxs) {
       width: 240px;
     }
+    
+    &::placeholder{
+      font-size: 15px;
+
+    }
   }
   
   .search-icon{
@@ -153,7 +158,7 @@
     color: $white;
     font-size: 14px;
     cursor: pointer;
-    width: 42px;
+    width: 45px;
     height: 100%;
     @include center;
     flex-shrink: 0;
