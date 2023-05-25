@@ -80,7 +80,7 @@
   font-size: 16px;
   @include center;
   cursor: pointer;
-  @include dir-right(15px);
+  @include dir-right(20px);
   bottom: -100px;
   transition: opacity .9s, bottom .3s;
   opacity: 0;
@@ -88,7 +88,7 @@
 
   &.active{
     opacity: 1;
-    bottom: 15px;
+    bottom: 20px;
   }
 }
 

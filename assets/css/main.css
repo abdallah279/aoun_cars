@@ -286,14 +286,14 @@ input:focus {
   overflow: hidden;
 }
 html[lang=en] .up-btn {
-  right: 15px;
+  right: 20px;
 }
 html[lang=ar] .up-btn {
-  left: 15px;
+  left: 20px;
 }
 .up-btn.active {
   opacity: 1;
-  bottom: 15px;
+  bottom: 20px;
 }
 
 .main-search {
@@ -2884,7 +2884,7 @@ html[lang=ar] .about-logo-con .about-logo {
   width: calc(100% + 10px);
   height: calc(100% + 10px);
   border-radius: 50%;
-  border: 2px dashed #1D71B8;
+  border: 2px dashed #fff;
   transition: all 0.3s ease;
 }
 
@@ -2892,11 +2892,19 @@ html[lang=ar] .about-logo-con .about-logo {
   display: flex;
   gap: 10px;
 }
+.car-carousel .owl-item {
+  overflow: hidden;
+  border-radius: 5px;
+}
 .car-carousel .img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 200px;
   border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.car-carousel .img:hover {
+  transform: scale(1.1);
 }
 .car-carousel .owl-dots {
   display: none !important;
