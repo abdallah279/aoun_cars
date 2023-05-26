@@ -1007,6 +1007,28 @@ html[lang=ar] .live-p {
   padding: 4px 12px;
 }
 
+.show-detailes {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1D71B8;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 0 8px 0 rgba(32, 32, 32, 0.1);
+}
+
 .input-g {
   margin-bottom: 20px;
   display: block;
@@ -2475,6 +2497,11 @@ html[lang=ar] .agency-item::before {
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
+.car-card:hover .car-img .show-detailes {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1) translate(-50%, -50%);
+}
 .car-card.offer {
   box-shadow: unset;
 }
@@ -3045,4 +3072,134 @@ html[lang=en] .car-imgs .item i {
   width: 100%;
   height: 280px;
   border-radius: 8px;
+}
+
+.car-modal {
+  background-color: #fff;
+  width: 600px;
+  padding: 30px;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 8px;
+  z-index: 1000;
+  opacity: 0;
+  top: 30%;
+  pointer-events: none;
+  transition: all 0.8s cubic-bezier(0.68, -0.3, 0.265, 1.3);
+}
+@media screen and (max-width: 768px) {
+  .car-modal {
+    width: calc(100% - 50px);
+  }
+}
+@media screen and (max-width: 425px) {
+  .car-modal {
+    width: calc(100% - 20px);
+    padding: 20px 12px;
+  }
+}
+.car-modal.active {
+  pointer-events: auto;
+  opacity: 1;
+  top: 50%;
+}
+.car-modal .close-modal {
+  position: absolute;
+  top: -20px;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1D71B8;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+html[lang=en] .car-modal .close-modal {
+  left: -20px;
+}
+html[lang=ar] .car-modal .close-modal {
+  right: -20px;
+}
+@media screen and (max-width: 425px) {
+  .car-modal .close-modal {
+    top: -50px;
+    transform: translateX(50%);
+    border: 2px solid #fff;
+  }
+  html[lang=en] .car-modal .close-modal {
+    left: 50%;
+  }
+  html[lang=ar] .car-modal .close-modal {
+    right: 50%;
+  }
+}
+.car-modal .car-modal-content {
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+@media screen and (max-width: 576px) {
+  .car-modal .car-modal-content {
+    flex-direction: column-reverse;
+    gap: 20px;
+  }
+}
+.car-modal .car-modal-content .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+.car-modal .car-modal-content .info .name {
+  font-size: 22px;
+  color: #202020;
+}
+.car-modal .car-modal-content .info .item {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 16px;
+  color: #1D71B8;
+  margin-bottom: 12px;
+}
+.car-modal .car-modal-content .info .item:last-child {
+  margin-bottom: 0;
+}
+.car-modal .car-modal-content .info .main-btn {
+  border-radius: 25px;
+}
+
+.car-modal-carousel {
+  width: 250px !important;
+}
+@media screen and (max-width: 576px) {
+  .car-modal-carousel {
+    width: 100% !important;
+  }
+}
+.car-modal-carousel .car-img {
+  width: 250px !important;
+  height: 220px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 576px) {
+  .car-modal-carousel .car-img {
+    width: 100% !important;
+  }
+}
+.car-modal-carousel .owl-dots {
+  margin-top: 15px;
+}
+@media screen and (max-width: 576px) {
+  .car-modal-carousel .owl-dots {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */

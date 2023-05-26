@@ -803,6 +803,24 @@
   }
 }
 
+.show-detailes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(.7);
+  @include circle(44px);
+  @include center;
+  background-color: $main;
+  color: $white;
+  font-size: 15px;
+  cursor: pointer;
+  z-index: 10;
+  transition: $main-transition;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: $main-shadow;
+}
+
 
 // Inputs
 .input-g{

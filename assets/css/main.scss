@@ -173,6 +173,20 @@
     @include center;
     height: 200px;
     position: relative;
+
+    // &::after{
+    //   position: absolute;
+    //   content: '';
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   z-index: 2;
+    //   background-color: rgba($color: #000000, $alpha: .2);
+    //   transition: $main-transition;
+    //   opacity: 0;
+    //   pointer-events: none;
+    // }
     .img{
       display: block;
       width: 90%;
@@ -180,6 +194,7 @@
       margin: 0 auto;
       vertical-align: middle;
     }
+
   }
 
   .content{
@@ -260,6 +275,17 @@
 
   &:hover .car-btn .main-btn{
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+
+  &:hover{
+
+    .car-img{
+      .show-detailes{
+        opacity: 1;
+        pointer-events: auto;
+        transform: scale(1) translate(-50%, -50%);
+      }
+    }
   }
 
 
@@ -894,4 +920,127 @@
   width: 100%;
   height: 280px;
   border-radius: 8px;
+}
+
+
+
+// Car Modal
+.car-modal{
+  background-color: $white;
+  width: 600px;
+  padding: 30px;
+  position: fixed;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 8px;
+  z-index: 1000;
+  opacity: 0;
+  top: 30%;
+  pointer-events: none;
+  transition: all .8s cubic-bezier(0.68, -0.30, 0.265, 1.3);
+
+  @media screen and (max-width:$screen-md) {
+    width: calc(100% - 50px);
+  }
+  
+  @media screen and (max-width:$screen-xs) {
+    width: calc(100% - 20px);
+    padding: 20px 12px;
+  }
+
+  &.active{
+    pointer-events: auto;
+    opacity: 1;
+    top: 50%;
+  }
+
+  .close-modal{
+    position: absolute;
+    top: -20px;
+    @include dir-left(-20px);
+    @include circle(40px);
+    @include center;
+    background-color: $main;
+    color: $white;
+    font-size: 15px;
+    cursor: pointer;
+    
+    @media screen and (max-width:$screen-xs) {
+      top: -50px;
+      @include dir-left(50%);
+      transform: translateX(50%);
+      border: 2px solid $white;
+    }
+  }
+
+  .car-modal-content{
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    
+    @media screen and (max-width:$screen-sm) {
+      flex-direction: column-reverse;
+      // align-items: center;
+      gap: 20px;
+    }
+
+    .info{
+      // flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 12px;
+
+      .name{
+        font-size: 22px;
+        color: $black;
+      }
+
+      .item{
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        font-size: 16px;
+        color: $main;
+        margin-bottom: 12px;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+      }
+      
+      .main-btn{
+        border-radius: 25px;
+      }
+    }
+  }
+  
+}
+
+.car-modal-carousel{
+  width: 250px !important;
+
+  @media screen and (max-width:$screen-sm) {
+    width: 100% !important;
+  }
+  
+  .car-img{
+    width: 250px !important;
+    height: 220px;
+    border-radius: 10px;
+    object-fit: cover;
+    @media screen and (max-width:$screen-sm) {
+      width: 100% !important;
+    }
+  }
+
+  .owl-dots{
+    margin-top: 15px;
+
+    @media screen and (max-width:$screen-sm) {
+      display: none;
+    }
+  }
 }

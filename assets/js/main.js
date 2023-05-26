@@ -58,6 +58,16 @@ $('.close').on('click', function(){
 $('.open-filter').on('click', function(){
   $('.flex-1').addClass('open');
   $('.overlay-m').fadeIn(500);
+});
+
+
+$('.show-detailes').on('click', function(){
+  $('.car-modal').addClass('active');
+  $('.overlay-m').fadeIn(600);
+})
+
+$('.close-modal').on('click', function(){
+  $('.overlay-m').click();
 })
 
 $('.overlay-m').on('click', function(){
@@ -66,6 +76,7 @@ $('.overlay-m').on('click', function(){
   $(".side-filter-cards").removeClass('open-side');
   $('.side-links-con').removeClass('open');
   $('.flex-1').removeClass('open');
+  $('.car-modal').removeClass('active');
   $(this).fadeOut(500);
 });
 
